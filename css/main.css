@@ -1,0 +1,141 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.main__div {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 34px 35px 52px -7px rgba(0, 0, 0, 0.11);
+  padding: 45px;
+  background-color: var(--White);
+}
+
+.main__div-daniel {
+  grid-column: 1 / span 2;
+  background-color: var(--Moderate-violet);
+  position: relative;
+}
+
+.main__div-jon {
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+.main__div-jeanette {
+  grid-row: 2 / 2;
+  color: var(--Very-dark-grayish-blue);
+}
+
+.main__div-patrick {
+  grid-row: 2;
+  grid-column: span 2;
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.main__div-kira {
+  grid-row: 1 / span 2;
+  color: var(--Very-dark-grayish-blue);
+}
+
+.div__div-profile {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.profile_img {
+  border-radius: 50%;
+  max-width: 2.5rem;
+  border: 2px solid var(--White);
+}
+
+.quote_img {
+  position: absolute;
+  top: 0;
+  left: 432px;
+  width: 8.7rem;
+  height: 8.7rem;
+}
+
+.p_state {
+  opacity: 0.5;
+  margin-top: 3px;
+}
+
+.main__div-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.div__div-publication {
+  margin-top: 20px;
+  z-index: 10;
+}
+
+.publication__p_title {
+  font-size: 1.5rem;
+  font-weight: var(--w-600);
+}
+
+.publication__p_content {
+  opacity: 0.7;
+  margin-top: 1.3rem;
+  line-height: 23px;
+}
+
+.img_daniel {
+  border: 2px solid var(--Light-gray);
+}
+
+.img_patrick {
+  border: 2px solid var(--Moderate-violet);
+}
+
+@media screen and (max-width: 1365px) {
+  main {
+    display: grid;
+    grid-template-areas:
+      "daniel"
+      "jon"
+      "jeanette"
+      "patrick"
+      "kira";
+    grid-template-columns: 1fr;
+  }
+
+  .main__div-daniel {
+    grid-area: daniel;
+  }
+
+  .main__div-jon {
+    grid-area: jon;
+  }
+
+  .main__div-jeanette {
+    grid-area: jeanette;
+  }
+
+  .main__div-patrick {
+    grid-area: patrick;
+  }
+
+  .main__div-kira {
+    grid-area: kira;
+  }
+
+  .quote_img {
+    position: absolute;
+    top: 0;
+    left: 254px;
+    width: 8.2rem;
+    height: 9rem;
+  }
+
+  .publication__p_title {
+    font-size: 1.5rem;
+    line-height: 30px;
+    padding-right: 78px;
+  }
+}

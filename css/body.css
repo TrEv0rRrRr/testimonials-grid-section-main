@@ -3,7 +3,7 @@
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -14,4 +14,36 @@
 
   --Light-gray: hsl(0, 0%, 81%);
   --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  --w-500: 500;
+  --w-600: 600;
+}
+
+body {
+  display: flex;
+  background-color: var(--Light-grayish-blue);
+  font-family: "Barlow Semi Condensed";
+  font-weight: var(--w-500);
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: var(--White);
+}
+
+.container {
+  display: flex;
+  align-self: center;
+  max-width: 85rem;
+  max-height: 95rem;
+  min-width: 25rem;
+}
+
+@media screen and (max-width: 1365px) {
+  .container {
+    display: flex;
+    max-width: 30rem;
+    justify-content: center;
+    margin: 15px;
+  }
 }
